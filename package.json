@@ -19,7 +19,7 @@
   "scripts": {
     "tsc": "tsc",
     "start": "node dist/server.js",
-    "postinstall": "npm run tsc && copyfiles -u 1 src/**/*.mustache dist/"
+    "postinstall": "npm run tsc && npx copyfiles -u 1 src/**/*.mustache dist/"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
@@ -30,6 +30,7 @@
     "@types/express": "^5.0.6",
     "@types/mustache-express": "^1.2.5",
     "@types/node": "^25.0.9",
+    "copyfiles": "^2.4.1",
     "typescript": "^5.9.3"
   }
 }
