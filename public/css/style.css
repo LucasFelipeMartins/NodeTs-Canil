@@ -38,6 +38,9 @@ header input {
     width: 100%;
     max-width: 200px;
 }
+a{
+    color: #102581;
+}
 nav {
     background: var(--main);
     color: var(--darkbg);
