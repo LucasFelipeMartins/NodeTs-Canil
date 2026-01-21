@@ -9,19 +9,15 @@ dotenv.config();
 const server = express();
 
 server.set('view engine', 'mustache');
-server.set('view', path.join(__dirname, 'view'));
+server.set('views', path.join(__dirname, '../src/views'));
 server.engine('mustache', mustache());
 
 server.use(express.static(path.join(__dirname, '../public')));
 
-server.use(mainRouter);
+server.use('/', mainRouter);
 
 server.use((req, res) => {
     res.send("Pagina não encontrada");
 })
 
-server.listen(process.env.PORT, () => {
-
-    console.log("servidor rodando em http://localhost:3000")
-
-});
+server.listen(process.env.PORT);

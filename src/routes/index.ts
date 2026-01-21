@@ -1,13 +1,13 @@
-import { Router } from "express";
+import express from "express";
 import * as pageController from '../controllers/pageController'
 import * as buscaController from '../controllers/buscaController'
 
-const router = Router();
+const router = express.Router();
 
 router.get('/', pageController.home);
-router.get('/cachorros', pageController.dogs);
-router.get('/gatos', pageController.cats);
-router.get('/peixes', pageController.fishes);
+router.get('/dogs', pageController.dogs);
+router.get('/cats', pageController.cats);
+router.get('/fishes', pageController.fishes);
 
 router.get('/busca', buscaController.busca)
 
