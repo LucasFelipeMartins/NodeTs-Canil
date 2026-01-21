@@ -10,12 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/LucasFelipeMartins/NodeTs-Canil.git"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "license": "ISC",
   "author": "",
-  "type": "]",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e ts,json,mustache src/server.ts"
+    "start": "node dist/server.js",
+    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
